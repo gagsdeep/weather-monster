@@ -1,12 +1,58 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import {Provider} from 'react-redux';
+import {createStore, applyMiddleware} from 'redux';
+import thunk from 'redux-thunk';
+import './style/App.css';
+import './static/bootstrap.css';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+// COMPONENTS
+import App from './components/App';
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+// REDUCERS
+import reducers from './reducers';
+const initialState = {
+    allCities: [
+        {
+            name: 'Hyderabad',
+            id: 'hyderabad'
+        }, {
+            name: 'Bangalore',
+            id: 'bangalore'
+        }, {
+            name: 'Delhi',
+            id: 'delhi'
+        }, {
+            name: 'Mumbai',
+            id: 'mumbai'
+        }, {
+            name: 'Bangkok',
+            id: 'bangkok'
+        }, {
+            name: 'Berlin',
+            id: 'berlin'
+        }, {
+            name: 'Paris',
+            id: 'paris'
+        }, {
+            name: 'New York',
+            id: 'newyork'
+        }, {
+            name: 'Chennai',
+            id: 'chennai'
+        }, {
+            name: 'Dubai',
+            id: 'dubai'
+        }
+    ],
+    favorites: []
+}
+
+const store = createStore(reducers, initialState, applyMiddleware(thunk))
+
+ReactDOM.render(
+    <Provider store={store}>
+    <div>
+        <App/>
+    </div>
+</Provider>, document.getElementById('root'));
