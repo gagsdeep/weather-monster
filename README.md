@@ -8,9 +8,17 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-You should have npm installed in your system.
+You should have git,npm installed in your system.
 
 ### Steps to follow to run on local machine
+
+### `Run git clone https://github.com/gagsdeep/weather-monster.git`
+
+This command will clone this git project to you local machine.
+
+### `Open projet in terminal/command prompt`
+
+Open a terminal/command prompt in your machine at this project folder
 
 ### `Run npm install`
 
@@ -23,7 +31,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ### `npm test a`
 
-Launches all the test in the interactive watch mode.<br />
+This comand launches all the test in the interactive watch mode.<br />
 
 ### -------------------------------------------------------------------------------
 
