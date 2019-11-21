@@ -33,9 +33,9 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 This comand launches all the test in the interactive watch mode.<br />
 
-### -------------------------------------------------------------------------------
 
-### Command to get build ready file.
+
+### Additional command to get build ready file.
 
 ### `npm build`
 
